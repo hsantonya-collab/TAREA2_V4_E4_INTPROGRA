@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import os
 import csv
+ARCHIVO_SERVICIOS="servicios.txt"
 
 def ingresar_cliente():
     print("Ingreso de cliente nuevo:")
@@ -14,11 +15,33 @@ def ingresar_cliente():
     return cliente
 
 def ingresar_servicio():
-    cod = input("service code:  ")
-    nombre_serv = input("Nombre serv")
-    costo = int(input("Costo:   "))
-    servicio = [cod, nombre_serv, "Area","Consultor", "10 hrs", costo, "Sin observaciones"]
-
+    #pasaremos a que el usuario ingrese los datos del servicio menos el costo y observaciones, para el final
+    cod = input("Ingrese su código:  ")
+    nombre_serv = input("Ingrese el nombre del servicio: ")
+    area_con=input("Ingrese el área de consultoria: ")
+    consultor=input("Ingrese su consultor responsable: ")
+    duracion=input("Ingrese su duración del servicio:")
+    #hacer un codigo que verifique si el usuario realizo el paso 1
+    
+    while True:
+        costo=int(input("Ingrese el costo (ej: 50000):")) #devemos ver si el costo es numero entero por eso usaremos .isdigit que es una forma de verificar que solo escribio numeros
+        if costo.isdigit()
+            costo=float(costo)
+            break
+        else:
+            print("ERROR. Ingrese un numero valido (ej:50000)")
+    observacion="ingrese sus observaciones: "
+    #ahora pasaremos a verificar si el presupuesto es mayor o igual al costo de servicio, al ser este el caso return provocara que se salte el if y en caso de no ser asi se realizara la funcion de if
+    if "presupuesto" < costo #presupuesto debe escribirse igual arriba
+        print(f"El cliente {nombre} no puede contratar el servicio, el costo supera al presupuesto disponible ({"presupuesto"}).")
+        return
+    servicio = {
+        "Rut":rut,"Código del servicio":cod,
+        "":,"":,
+        "":,"":,
+        "":
+    }
+    #debemos guardar la biblioteca servicio
     return servicio
 
 def visualizar_cliente(lista_clientes):
